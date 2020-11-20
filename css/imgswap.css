@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+.logo{
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 30px;
+}
+.logo.active{
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0,.8);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.container img{
+    max-width: 700px;
+}
+#bg{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    mix-blend-mode: hue;
+    pointer-events: none;
+}
+.tools{
+    width: 700px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0,0,0,.5);
+}
+.swap,.copy,.reset{
+    height: 30px;
+    padding: 5px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#code{
+    color: #ffffff;
+    padding: 10px;
+    background: #000;
+    cursor: default;
+    outline: none;
+    border: none;
+    width: 220px;
+}
+#code::placeholder{
+    color: #fff;
+}
+small{
+    color: #fff;
+    font-size: 20px;
+    display: none;
+    animation: fade 2s forwards;
+}
+small.active{
+    display: unset;
+}
+@keyframes fade{
+    0%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@media screen and (max-width:768px){
+    .container img{
+        max-width: 500px;
+    }
+}
+@media (max-width:702px) and (min-width:600px){
+    .tools{
+        width: 600px;
+    }
+}
+@media (max-width:599px) and (min-width:100px){
+    .container{
+        justify-content: flex-end;
+    }
+    .container img{
+        max-width: 400px;
+    }
+    .tools{
+        width: 100%;
+        flex-direction: column;
+    }
+    .swap,.copy,#code,small{
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width:425px){
+    .container{
+        justify-content: flex-end;
+    }
+    .container img{
+        max-width: 350px;
+    }
+}
+@media screen and (max-width:350px){
+    .container img{
+        max-width: 300px;
+    }
+}
+@media screen and (max-width:300px){
+    .container img{
+        max-width: 250px;
+    }
+}
+@media screen and (max-width:250px){
+    .container img{
+        max-width: 230px;
+    }
+    .swap,.copy,#code,small{
+        font-size: 13px;
+    }
+    .logo{
+        margin: 20px 2px;
+    }
+}
+@media (max-width:249px) and (min-width:180px){
+    .container img{
+        max-width: 150px;
+    }
+}
+@media (max-width:179px) and (min-width:150px){
+    .container img{
+        max-width: 140px;
+    }
+}
+@media (max-width:149px) and (min-width:100px){
+    .container img{
+        max-width: 99px;
+    }
+    .swap,.copy,#code,small{
+        font-size: 10px;
+    }
+}
