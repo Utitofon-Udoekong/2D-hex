@@ -1,3 +1,4 @@
-# 3d-space
+# 2d-hex
 
-##3d-space is an online tool created to aid architectural and structural designs
+This is the development version of 2d-hex with added functionalities
+
